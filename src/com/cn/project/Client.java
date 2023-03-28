@@ -36,6 +36,7 @@ public class Client {
 			// create a socket to connect to the server
 			requestSocket = new Socket("localhost", serverPortNumber);
 			System.out.println("Connected to localhost in port :" + SERVER_PORT);
+			System.out.println("Client Port is :" + requestSocket.getLocalPort());
 			// initialize inputStream and outputStream
 			out = new ObjectOutputStream(requestSocket.getOutputStream());
 			out.flush();

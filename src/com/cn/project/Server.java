@@ -167,7 +167,7 @@ public class Server {
 				}
 //				fileOutputStream.close();
 
-				System.out.println("======File Receive success======");
+				System.out.println("======File Receive from client " + this.no + " success======");
 
 			}
 
@@ -186,7 +186,7 @@ public class Server {
 
 			String filePath = FILE_PATH + fileName;
 
-			System.out.println("Sending file to the client");
+			System.out.println("Sending file to the client " + this.no);
 
 			// Make file chunks of size 1kb and send to the server
 			int totalBytesTransferred = 0;
@@ -214,7 +214,7 @@ public class Server {
 						dos.flush();
 					}
 //				fileInputStream.close();
-					System.out.println("======File Send success======");
+					System.out.println("======File Send to client " + this.no + " success======");
 
 				} else {
 					dos.writeLong(0L);
